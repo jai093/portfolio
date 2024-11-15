@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://kit.fontawesome.com/8e208c522a.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+          }
+          body{ 
+            background-color:rgb(126, 176, 255);
+            color: white;
+          }
+          nav{
+            display:flex;
+            width: 100%;
+            justify-content:space-between;
+            align-items: center;
+            height: 50px;
+            background-color: rgb(30, 30, 52);
+          }
+          nav ul {
+            display: flex;
+             justify-content: center;
+            }
+            nav li {
+               list-style: none;
+                margin: 28px;
+              }
+            nav ul li a{
+              text-decoration: none;
+              color: white;
+            }
+            nav ul li a:hover{
+            color:rgb(109, 84, 84);
+            font-size: 1.02rem;
+            }
+            .left {
+             font-size: 1.5rem;
+            }
+            .right{
+            max-width: 130%;
+            }
+            .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 70px 50px;
+            width: 90%;
+            }
+            .firstsection > div {
+             width: 50%;
+            }
+            .leftsection {
+            font-size: 2rem;
+            margin: -30px 0px;
+            }
+            .purple {
+             color: rgb(152, 0, 254);
+            }
+            .rightsection img {
+            width: 55%;
+            margin: -40px 0px -35px 200px;
+            border-radius: 35%;
+            }
+            .gray{
+            color: grey;
+            }
+            main hr{
+            background-color: rgb(94, 25, 94);
+            height: 1px;
+            margin: 40px 40px;
+            }
+                
+            #element{
+            color: rgb(126, 0, 126);
+            }
+            .section.container{
+            max-width: 80vw;
+            margin:auto;
+            height: 45vh;
+            }
+            .section.title{
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-top: 50px;
+          }
+          .section-title h2{
+            font-size: 1.5rem;
+            color:var(--text-black-900);
+            font-weight: 700;
+            position: relative;
+            margin-bottom: 20px;
+          }
+          .imgnn img{
+            width: 20rem;
+            margin: -300px 0px 0px 710px;
+          }
+          .Secondsection{
+            max-width: 80vw;
+            margin:auto;
+            height: 56vh;
+          }
+          .Secondsection h1{
+            font-size: 1.5rem;
+          }
+          .Secondsection .box{
+            background: white;
+            width: 80vw;
+            height: 1px;
+            margin: 45px 0px;
+            display: flex;
+          }
+          .Secondsection .vertical{
+            background-color: white;
+            height: 30px;
+            width: 0.5px;
+            margin: 0px 100px;
+          }
+          .img-1 {
+              width: 100px;
+              top: -2px;
+              position: relative;
+              left: -50px;
+              top: 55px;
+            }
+            .img-1{
+              animation: spinner infinite 10s linear;
+            }
+            @keyframes spinner{
+              from{
+                transform: rotate(0deg);
+              }
+              to{
+                transform: rotate(360deg);
+              }
+            } 
+            .img-2 {
+              width: 100px;
+              top: -2px;
+              position: relative;
+              left: -50px;
+              top: 55px;
+          }
+          .img-2{
+            animation: spinner infinite 10s linear;
+          }
+          @keyframes spinner{
+            from{
+              transform: rotate(0deg);
+            }
+            to{
+              transform: rotate(360deg);
+            }
+          }
+          .img-3 {
+            width: 100px;
+            top: -2px;
+            position: relative;
+            left: -50px;
+            top: 55px;
+          }
+          .img-3{
+            animation: spinner infinite 10s linear;
+          }
+          @keyframes spinner{
+            from{
+              transform: rotate(0deg);
+            }
+            to{
+              transform: rotate(360deg);
+            }
+          }
+          .img-4 {
+            width: 100px;
+            top: -2px;
+            position: relative;
+            left: -50px;
+            top: 55px;
+          }
+          .img-4{
+            animation: spinner infinite 10s linear;
+          }
+          @keyframes spinner{
+            from{
+              transform: rotate(0deg);
+            }
+            to{
+              transform: rotate(360deg);
+            }
+          }
+          .contact-cols{
+            display: flex;
+            height: 65vh;
+            justify-content: center;
+            align-items: center;
+            }
+                      
+            .info{
+            flex-basis: 30%;
+            }
+            .info2{
+              flex-basis: 35%;
+            }
+            input[type= text]{
+            padding: 12px;
+            color: whitesmoke;
+            padding-right: 15rem;
+            margin-bottom: 21px;
+            background: transparent;
+            border-radius: 10px;
+            outline: none;
+            border: 2px solid whitesmoke;
+            box-shadow: 2px 2px 10px whitesmoke;
+          }
+          textarea{
+            padding: 55px;
+            color: whitesmoke;
+            background: transparent;
+            border-radius: 10px;
+            outline: none;
+            border: 2px solid whitesmoke;
+            box-shadow: 2px 2px 10px whitesmoke;
+            padding-right: 65px;
+          }
+          ::placeholder{
+            color: whitesmoke;
+            text-transform: capitalize;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,sans-serif;
+          }
+          input[type= submit]{
+            margin-top: 20px;
+            color: whitesmoke;
+            padding: 10px;
+            outline: none;
+            border: 2px solid whitesmoke;
+            background-color: transparent;
+            box-shadow: 2px 2px 10px whitesmoke;
+            border-radius: 10px;
+          }
+          input[type= submit]:hover{
+              padding-right: 40px;
+              padding-left: 40px;
+              transition: 0.3s ease-in-out;
+            }
+            .head h1{
+              font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              text-transform: capitalize;
+              font-size: 2rem;
+              margin-bottom: 10px;
+            }
+            .head span{
+              font-size: 2.5rem;
+              color: whitesmoke;
+            }
+            .head h3{
+              font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              font-weight: lighter;
+            }
+                      
+            .head i{
+            font-size: 1.2rem;
+            }
+                      
+            .apps{
+            margin-top: 20px;
+            display: flex;
+            }
+                      
+            .apps i{
+            margin-right: 13px;
+            font-size: 2rem;
+            padding: 7px;
+            }
+                      
+            .apps i:hover{
+            color:whitesmoke;
+            font-size: 3rem;
+            transition: .6s ease-in-out;
+            position: absolute;
+            }
+            footer {
+            background-color:rgb(62, 60, 60);
+            }
+            .fc{
+            width: 90%;
+            padding: 70px 30px 20px;
+            }
+            .si{
+            display: flex;
+            justify-content: center;
+            }
+            .si a{
+            text-decoration: none;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+            }
+            .si a i{
+            font-size: 2em;
+            color: black;
+            opacity: 0.9;
+            }
+            .si a:hover{
+            background-color:rgb(62, 60, 60);
+            transition: 0.5s;
+            }
+            .si a:hover i{
+            color: white;
+            transition: 0.5s;
+            }
+            .footerNav {
+            margin: 30px 0;
+            }
+            .footerNav ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            }
+           .footerNav ul li a{
+            color: white;
+            margin: 20px;
+            text-decoration: none;
+            font-size: 1.3em;
+            opacity: 0.1;
+            transition: 0.5s;
+            }
+            .footerNav ul li a:hover{
+            opacity: 1;
+            color:rgb(239, 0, 239);
+           }
+            .footerBottom{
+            background-color:rgb(62, 60, 60);
+            padding: 20px;
+            text-align: center;
+            }
+            .footerBottom p{
+            color: white;
+           }
+           .designer{
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+            margin: 0px 5px;
+           }
+           #acheive1 {
+            text-align: center;
+          }
+          #acheive1 .pro-con {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 7px;
+            flex-wrap: wrap;
+          }
+          #acheive1 .pc {
+            width: 23%;
+            min-width: 200px;
+            padding: 10px 12px;
+            border: 1px solid #cce7d0;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 20px 20px 30px rgba(97, 248, 107, 0.03);
+            margin: 15px 0px;
+            transition: 0.5s ease;
+            position: relative;
+          }
+          #acheive1 .pc:hover {
+            box-shadow: 20px 20px 30px rgba(97, 248, 107, 0.25);
+          }
+          #acheive1 .pc img {
+            width: 100%;
+            border-radius: 35px;
+          }
+          #acheive1 .pc .design {
+            text-align: start;
+            padding: 4px 0px;
+          }
+          #acheive1 .pc .design span {
+            color: #465b52;
+            font-size: 12px;
+          }
+          #acheive1 .pc .design h5 {
+            padding-top: 7px;
+            color: #465b52;
+          }
+          #acheive1 .pc .design i {
+            font-size: 12px;
+            color: rgb(243, 181, 25);
+          }
+          #acheive1 .pc .design h4 {
+            padding-top: 7px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #088178;
+          }
+
+          #acheive2
+           {
+            text-align: center;
+          }
+          #acheive2
+           .pro-con2 {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 7px;
+            flex-wrap: wrap;
+          }
+          #acheive2
+           .pc2 {
+            width: 23%;
+            min-width: 200px;
+            padding: 10px 12px;
+            border: 1px solid #cce7d0;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 20px 20px 30px rgba(97, 248, 107, 0.03);
+            margin: 15px 0px;
+            transition: 0.5s ease;
+            position: relative;
+          }
+          #acheive2
+           .pc2:hover {
+            box-shadow: 20px 20px 30px rgba(97, 248, 107, 0.25);
+          }
+          #acheive2
+           .pc2 img {
+            width: 100%;
+            border-radius: 35px;
+          }
+          #acheive2
+           .pc2 .design1 {
+            text-align: start;
+            padding: 4px 0px;
+          }
+          #acheive2
+           .pc2 .design1 span {
+            color: #465b52;
+            font-size: 12px;
+          }
+          #acheive2
+           .pc2 .design1 h5 {
+            padding-top: 7px;
+            color: #465b52;
+          }
+          #acheive2
+           .p2 .design1 i {
+            font-size: 12px;
+            color: rgb(243, 181, 25);
+          }
+          #acheive2
+           .pc2 .design1 h4 {
+            padding-top: 7px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #088178;
+          }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">My PortFolio</div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#experience">My Skills</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection" id="home">
+            <div class="leftsection"><h1>Hey I am</h1><span class="purple"> <h1>NAVYA NAYAK</h1></span>
+                <div> <h1>A Passionate</h1></div>
+                <span id="element"><h1>Video Editor</h1></span>
+                <span class="typed-cursor-blink"></span>
+                </div>
+                <div class="rightsection"> <img src="navya.jpg" alt>
+                </div>
+            </section>
+            <hr>
+            <section class="about" id="about">
+                <div class="container section">
+                <div class="row">
+                <div class="section-title">
+                  <div class="head">
+                    <h2>About Me</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="about-content padd-15">
+                    <div class="row">
+                        <div class="about-text">
+                          <h3>I'm NAVYA NAYAK, a passionate and detail-oriented we developer with <br> a love for crafting seamless digital experiences My journey <br>into the world of coding began with a fascination for turning ideas <br> into functional, aesthetically pleasing websites.With a strong foundation in <br>HTML, CSS, JavaScript, and frameworks 
+                          like React and Angular, <br>I specialize in creating responsive, user-friendly <br>interfaces that look great on any device.
+                          My goal is to combine creativity with <br> technical expertise to build applications <br>that not only meet user needs but exceed their expectations.
+                        </h3>
+                        
+                            <div class="imgnn">
+                                <img src="two.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="Secondsection" id="experience"><span class="gray">What I have Done so far</span>
+          <div class="head">
+            <h1>My Skills</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="img-1" src="html.png" alt="">
+                </div>
+                <div class="vertical">
+                    <img class="img-2" src="css.png" alt>
+                </div>
+                <div class="vertical">
+                    <img class="img-3" src="nodejs.png" alt>
+                </div>
+                <div class="vertical">
+                    <img class="img-4" src="js.png" alt>
+                </div>
+                <div class="vertical">
+                  <img class="img-4" src="python.png" alt>
+              </div>
+            </div>
+        </section>
+        <hr>
+        <section class="Secondsection" id="Acheivements">
+                  <div class="head">
+                      <h1>Acheivements</h1>
+                      <section class="Secondsection" id="experience"><span class="gray">What I have Done so far</span>
+                       
+                          <section id="acheive1" class="section-p1">
+                            <div class="pro-con">
+                            <div class="pc">
+                              <div class="pc">
+                            <img src="img2/ach1.jpg" alt="">
+                          </div>
+
+                            <div class="design">
+                            <span>Acheivement-1</span>
+                            <h5>Sai-Taranga</h5>
+                           
+                                       
+                            </div>
+                            </div>
+                    
+                            <div class="pc">
+                              <div class="pc">
+                                <img src="img2/ach2.jpg" alt="">
+                                </div>
+                                <div class="design">
+                                <span>Acheivement-2</span>
+                                <h5>Infosys</h5>
+                            
+                                </div>
+                                </div>
+                                <div class="pc">
+                                  <div class="pc">
+                                  <img src="img2/ach3.jpg" alt="">
+                                  </div>
+                                  <div class="design">
+                                  <span>Acheivement-3</span>
+                                  <h5>Sai-Intelliverse</h5>
+                                 
+                                  </div>
+                                  </div>
+                                </section>
+                                </section>
+                              </section>
+                    
+                      <hr>
+                      <section id="Extra" class="Secondsection">
+                        <div class="head">
+                            <h1>Projects</h1>
+                            <section class="Secondsection" id="experience"><span class="gray">What I have Done so far</span>
+                             
+                                <section id="acheive1" class="section-p1">
+                                  <div class="pro-con">
+                                  <div class="pc">
+                                    <div class="pc">
+                                  <img src="img/breast.jpeg" alt="">
+                                </div>
+      
+                                  <div class="design">
+                                  <span>Project-1</span>
+                                  <h5>Breast Cancer image classification</h5>
+                                 
+                                             
+                                  </div>
+                                  </div>
+                          
+                                  <div class="pc">
+                                    <div class="pc">
+                                      <img src="img/insta.jpeg" alt="">
+                                      </div>
+                                      <div class="design">
+                                      <span>Project-2</span>
+                                      <h5>Instagarm clone</h5>
+                                  
+                                      </div>
+                                      </div>
+                                      <div class="pc">
+                                        <div class="pc">
+                                        <img src="img/ecom.jpeg" alt="">
+                                        </div>
+                                        <div class="design">
+                                        <span>Project-3</span>
+                                        <h5>E-commerce website</h5>
+                                       
+                                        </div>
+                                        </div>
+                                      </section>
+                                      </section>
+                                    </section>
+                                  <hr>
+
+        <section id="contact">
+            <div class="contact-cols">
+                <div class="info">
+                    <div class="head">
+                        <h1><span>c</span>ontact Me</h1>
+                        <h3><i class="fa fa-envelope"></i>lorem1@ gmail.com</h3>
+                        <h3><i class="fa fa-phone"></i>0123456789</h3>
+                    </div>
+                    <div class="apps">
+                        <a href="https://www.linkedin.com/in/navya-nayak-b5976829b"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="index.docx"><i class="fa fa-download"></i></a>
+                    </div>
+                </div>
+                <div class="info2">
+                    <form action="#home">
+                        <input type="text" placeholder="email"/><br>
+                        <textarea placeholder="give your feed back"></textarea><br>
+                        <input type="submit" placeholder="submit">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed=new Typed('#element', {
+            strings: ['Web Designer', 'Graphic Designer', 'Video Editor'],
+            typeSpeed: 30,
+        });
+    </script>
+    <footer>
+        <div class="fc">
+            <div class="si">
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">My Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright © 2023; Designed for<span class="designer">Navya Nayak</span>
+            </p>
+        </div>
+    </div>
+</footer>
+</main>
+</body>
+</html>
